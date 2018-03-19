@@ -1,0 +1,160 @@
+
+html {
+  background: url(sky.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.the-grid{
+  display: grid;
+  grid-template-columns:
+    [left-sidebar-start] 1fr 10px 1fr [left-sidebar-end]
+    10px
+    [main-area-start] 1fr repeat(5, [gutter] 10px [row] 1fr)
+    [main-area-end]
+    10px
+    [right-sidebar-start] 1fr 10px 1fr [right-sidebar-end];
+
+  grid-template-rows:
+      [header-start] 10vw [header-end]
+      10px
+      [main-start] 26vw [main-end]
+      10px
+      [main-start-two] 26vw [main-end-two]
+      10px
+      [footer-start] 10vw [footer-end];
+
+}
+
+.blue {
+  grid-column: left-sidebar-start / right-sidebar-end;
+  grid-row: header-start / header-end;
+}
+
+.navbar{
+  font-family: 'Comfortaa', cursive;
+}
+
+.craigportfolio{
+  width: 60%;
+  position: absolute;
+  padding-top: 10px;
+  right: 0px;
+  margin: 15px;
+}
+
+.name{
+  font-family: 'Comfortaa', cursive;
+  position: absolute;
+  color: rgb(14, 12, 6);
+  font-size: 2vw;
+  padding: 0;
+  padding-top: 5px;
+  line-height: 1em;
+  margin: 0;
+
+}
+.portfolio-heading {
+  font-family: 'Comfortaa', cursive;
+  color: rgb(130, 130, 130);
+  font-size: 8vw;
+  padding: 0;
+  padding-left: 44px;
+  line-height: 1em;
+  margin: 0;
+}
+
+.about {
+  grid-column: left-sidebar-start / left-sidebar-end;
+  grid-row: main-start / main-end-two;
+  background-color: rgba(35, 97, 182, 0.42);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.about-me {
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  /*font-family: 'IBM Plex Mono', monospace;*/
+  font-family: 'PT Mono', monospace;
+  /*font-family: 'Advent Pro', sans-serif;*/
+  /*font-family: 'Nanum Myeongjo', serif;*/
+  letter-spacing: -.33px;
+  line-height: 1.6;
+  font-size: 1vw;
+}
+
+.skill-set {
+  grid-column: row 3 / main-area-end;
+  grid-row: main-start / main-end;
+  background-color: rgba(145, 145, 145, 0.33);
+  font-family: 'Comfortaa', cursive;
+  font-size: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; align-items: center;
+  padding-bottom: 50px;
+  padding-right: 12px;
+}
+
+.skill-set h1 {
+  padding-top: 30px;
+  color: rgb(57, 57, 57);
+}
+
+#skills {
+  height: 70px;
+}
+
+.green {
+  grid-column: main-area-start / gutter 3;
+  grid-row: main-start / main-end;
+  background-color: rgba(145, 145, 145, 0.33);
+  font-family: 'Comfortaa', cursive;
+  padding-left: 15px;
+  font-size: 1vw;
+}
+
+.red {
+  grid-column: main-area-start / gutter 3;
+  grid-row: main-start-two / main-end-two;
+  background-color: rgba(145, 145, 145, 0.33);
+  font-family: 'Comfortaa', cursive;
+  padding-left: 15px;
+  font-size: 1vw;
+}
+
+.slate {
+  grid-column: row 3 / main-area-end;
+  grid-row: main-start-two / main-end-two;
+  background-color: rgba(145, 145, 145, 0.33);
+  font-family: 'Comfortaa', cursive;
+  padding-left: 15px;
+  font-size: 1vw;
+}
+
+.skill-set {
+  grid-column: right-sidebar-start / right-sidebar-end;
+  grid-row: main-start / main-end-two;
+  background-color: rgba(35, 97, 182, 0.42);
+
+}
+
+.orange {
+  grid-column: left-sidebar-start / right-sidebar-end;
+  grid-row: footer-start / footer-end;
+  background-color: rgba(255, 153, 0, 0.33);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; align-items: center;
+  padding-right: 220px;
+}
+
+#social-icon {
+  height: 66px;
+}
